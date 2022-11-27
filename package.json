@@ -4,7 +4,7 @@
   "description": "Proyecto para curso WebdriverIO Abstracta",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio ./wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -32,4 +32,5 @@
   "dependencies": {
     "@wdio/cli": "^7.27.0"
   }
+  
 }
