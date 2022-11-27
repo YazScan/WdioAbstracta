@@ -2,7 +2,6 @@ const PAGE_TIMEOUT = 10000
 
 export default class BasePage {
 
-
    /**
     * Abrir página
     * @param {String} ruta a la cual acceder

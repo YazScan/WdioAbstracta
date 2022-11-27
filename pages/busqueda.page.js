@@ -1,29 +1,26 @@
 import BasePage from '../pages/base.page';
 
-class HomePage extends BasePage {
+class BusquedaPage extends BasePage {
 
-   //WebElements
-   get barraDeBusqueda(){ return $('[name="search"]') }
-
+   //Elementos Web
+   get resultado(){ return $('h4') }
 
    //-------------------------------------------------------------------------------------------------------//
-
+ 
    /**
-    * Escribe el artículo en el campo de búsqueda y presiona Enter
-    * @param {String} articulo que se buscará
+    * Click en el resultado de la búsqueda
     */
-   async buscar(articulo) {
-       await super.vaciarCampoYEnviarTexto(await this.barraDeBusqueda, articulo);
-       await this.barraDeBusqueda.keys('Enter');
+   async ingresarAlResultado() {
+       await super.clickearElemento(this.resultado);
    }
 
    /**
-    * Obtener texto de la barra de búsqueda
+    * Obtener texto del resultado de la búsqueda
     */
-   async obtenerTextoBusqueda() {
-       return await this.barraDeBusqueda.getValue();
+   async obtenerNombreResultado() {
+       return await this.resultado.getText();
    }
-
 
 }
-export default new HomePage();
+
+export default new BusquedaPage();
